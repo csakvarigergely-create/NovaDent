@@ -571,6 +571,21 @@ textarea {
   accent-color: var(--aqua-deep);
 }
 
+.form-feedback {
+  min-height: 1.2rem;
+  margin: 0.1rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.form-feedback.is-error {
+  color: #a33030;
+}
+
+.form-feedback.is-success {
+  color: #1f6f3f;
+}
+
 .final-cta {
   display: grid;
   gap: 1.5rem;
