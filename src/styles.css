@@ -52,7 +52,7 @@ a {
   gap: 1rem;
   max-width: calc(var(--max) + 48px);
   margin: 0 auto;
-  padding: 18px 24px;
+  padding: 20px 24px;
   backdrop-filter: blur(18px);
 }
 
@@ -62,13 +62,14 @@ a {
   gap: 0.75rem;
   color: var(--navy);
   font-weight: 800;
+  font-size: 1.08rem;
   letter-spacing: -0.03em;
 }
 
 .brand-mark {
   display: grid;
-  width: 42px;
-  height: 42px;
+  width: 45px;
+  height: 45px;
   place-items: center;
   border-radius: 15px;
   background: var(--navy);
@@ -81,7 +82,7 @@ a {
   align-items: center;
   gap: 1.4rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .desktop-nav a,
@@ -96,24 +97,25 @@ a {
 
 .header-phone {
   display: none;
-  padding: 0.72rem 1rem;
+  padding: 0.78rem 1.05rem;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.78);
   color: var(--navy);
   font-weight: 700;
+  font-size: 0.98rem;
 }
 
 .section-pad {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 72px 24px;
+  padding: 64px 24px;
 }
 
 .hero {
   display: grid;
   gap: 34px;
-  padding-top: 42px;
+  padding-top: 36px;
 }
 
 .eyebrow {
@@ -558,8 +560,10 @@ textarea {
 
 .final-phone {
   color: var(--white);
-  font-size: 1.2rem;
-  font-weight: 900;
+  font-size: 1.34rem;
+  font-weight: 950;
+  letter-spacing: 0.01em;
+  text-shadow: 0 4px 14px rgba(8, 21, 31, 0.35);
 }
 
 .site-footer {
@@ -617,7 +621,8 @@ textarea {
 
 @media (min-width: 980px) {
   h1 {
-    font-size: clamp(2.25rem, 4.5vw, 3.9rem);
+    font-size: clamp(2.15rem, 4.25vw, 3.65rem);
+    font-weight: 650;
     line-height: 1.18;
   }
 
