@@ -255,7 +255,7 @@ h3 {
 }
 
 .hero-visual img {
-  min-height: 470px;
+  min-height: 450px;
 }
 
 .floating-card {
@@ -616,6 +616,11 @@ textarea {
 }
 
 @media (min-width: 980px) {
+  h1 {
+    font-size: clamp(2.25rem, 4.5vw, 3.9rem);
+    line-height: 1.18;
+  }
+
   .hero,
   .comfort,
   .office-card {
