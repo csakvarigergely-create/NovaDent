@@ -209,6 +209,30 @@
         <a href="#">Impresszum</a>
       </div>
     </footer>
+    <section class="chatbot" aria-label="NovaDent chatbot">
+      <button class="chatbot-toggle" type="button" aria-label="Chatbot megnyitása" aria-expanded="false" aria-controls="chatbot-panel">
+        <span aria-hidden="true">💬</span>
+        <span>Kérdése van?</span>
+      </button>
+      <div id="chatbot-panel" class="chatbot-panel" hidden>
+        <div class="chatbot-header">
+          <div>
+            <h3>NovaDent asszisztens</h3>
+            <p>Segítek eligazodni a kezelések és az időpontkérés között.</p>
+          </div>
+          <button class="chatbot-close" type="button" aria-label="Chatbot bezárása">✕</button>
+        </div>
+        <div class="chatbot-body">
+          <p class="chatbot-message">Üdvözlöm! Miben segíthetek? Válasszon egy gyakori kérdést, vagy kérjen időpontot az űrlapon keresztül.</p>
+          <div class="chatbot-questions" aria-label="Gyakori kérdések"></div>
+          <div class="chatbot-answer-wrap" hidden>
+            <p class="chatbot-answer" aria-live="polite"></p>
+            <a class="btn btn-primary chatbot-cta" href="#idopont">Időpontot kérek</a>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="form.js"></script>
+    <script src="chatbot.js"></script>
   </body>
 </html>
