@@ -82,7 +82,8 @@ a {
   align-items: center;
   gap: 1.4rem;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.03rem;
+  font-weight: 600;
 }
 
 .desktop-nav a,
@@ -442,8 +443,8 @@ h3 {
 
 .testimonial-grid blockquote {
   margin-top: 1rem;
-  font-size: 1.03rem;
-  line-height: 1.72;
+  font-size: 1.07rem;
+  line-height: 1.78;
 }
 
 .pricing .price-list {
@@ -560,7 +561,8 @@ textarea {
   align-items: flex-start;
   gap: 0.75rem;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.97rem;
+  line-height: 1.55;
 }
 
 .checkbox input {
@@ -600,13 +602,31 @@ textarea {
 }
 
 .site-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  display: grid;
+  gap: 0.9rem;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 28px 24px 44px;
+  padding: 20px 24px 38px;
+  border-top: 1px solid var(--line);
   color: var(--muted);
+}
+
+.footer-main p {
+  margin: 0;
+}
+
+.footer-main {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.94rem;
+}
+
+.footer-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .site-footer strong {
@@ -651,8 +671,8 @@ textarea {
   }
 
   .site-footer {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: 1fr auto;
+    align-items: end;
   }
 }
 
@@ -739,8 +759,8 @@ textarea {
   }
 
   .testimonial-grid blockquote {
-    font-size: 0.98rem;
-    line-height: 1.65;
+    font-size: 1rem;
+    line-height: 1.68;
   }
 
   .appointment-form .btn {
