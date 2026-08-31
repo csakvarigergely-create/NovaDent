@@ -30,37 +30,48 @@ if (form) {
 
   const normalizeHungarianPhone = (rawValue) => {
     const digits = (rawValue || "").replace(/\D/g, "");
-    let normalized = digits;
+    let localNumber = digits;
 
-    if (normalized.startsWith("00")) {
-      normalized = normalized.slice(2);
+    if (localNumber.startsWith("0036")) {
+      localNumber = localNumber.slice(4);
+    } else if (localNumber.startsWith("36")) {
+      localNumber = localNumber.slice(2);
+    } else if (localNumber.startsWith("06")) {
+      localNumber = localNumber.slice(2);
+    } else if (localNumber.startsWith("0")) {
+      localNumber = localNumber.slice(1);
     }
-    if (normalized.startsWith("36")) {
-      normalized = normalized.slice(2);
-    } else if (normalized.startsWith("06")) {
-      normalized = normalized.slice(2);
-    } else if (normalized.startsWith("6")) {
-      normalized = normalized.slice(1);
-    }
 
-    normalized = normalized.slice(0, 9);
+    const isMobile = /^(20|30|70)/.test(localNumber);
+    const isBudapestLandline = localNumber.startsWith("1");
+    const maxLength = isMobile ? 9 : 8;
+    localNumber = localNumber.slice(0, maxLength);
 
-    if (!normalized) return "";
+    if (!localNumber) return "";
 
-    const p1 = normalized.slice(0, 2);
-    const p2 = normalized.slice(2, 5);
-    const p3 = normalized.slice(5, 9);
+    const areaCodeLength = isBudapestLandline ? 1 : 2;
+    const lastGroupLength = isMobile || isBudapestLandline ? 4 : 3;
+    const areaCode = localNumber.slice(0, areaCodeLength);
+    const subscriber = localNumber.slice(areaCodeLength);
+    const middleGroup = subscriber.slice(0, Math.max(0, subscriber.length - lastGroupLength));
+    const lastGroup = subscriber.slice(-lastGroupLength);
 
     let formatted = "+36";
-    if (p1) formatted += ` ${p1}`;
-    if (p2) formatted += ` ${p2}`;
-    if (p3) formatted += ` ${p3}`;
+    if (areaCode) formatted += ` ${areaCode}`;
+    if (middleGroup) formatted += ` ${middleGroup}`;
+    if (lastGroup) formatted += ` ${lastGroup}`;
 
     return formatted.trim();
   };
 
   const isValidHungarianPhone = (value) => {
-    return /^\+36 \d{2} \d{3} \d{4}$/.test(value);
+    const digits = (value || "").replace(/\D/g, "");
+    const localNumber = digits.startsWith("36") ? digits.slice(2) : digits;
+    return /^(?:(?:20|30|70)\d{7}|[1-9]\d{7})$/.test(localNumber);
+  };
+
+  const isValidEmail = (value) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
   };
 
   const readStateFromInputs = () => {
@@ -83,15 +94,14 @@ if (form) {
     if (!state.phone) return "Telefonszám megadása kötelező.";
     if (!isValidHungarianPhone(state.phone)) return "Kérjük, adjon meg érvényes telefonszámot.";
     if (!state.email) return "Email cím megadása kötelező.";
+    if (!isValidEmail(state.email)) return "Kérjük, adjon meg érvényes email címet.";
     if (!state.treatment) return "Kérjük, válasszon kezelést.";
     if (!state.acceptedPrivacy) return "Az adatkezelési feltételek elfogadása kötelező.";
     return "";
   };
 
   phoneInput.addEventListener("input", (event) => {
-    const formatted = normalizeHungarianPhone(event.target.value);
-    event.target.value = formatted;
-    state.phone = formatted;
+    state.phone = event.target.value;
   });
 
   phoneInput.addEventListener("blur", (event) => {
