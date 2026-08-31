@@ -37,13 +37,13 @@ if (chatbotRoot) {
     }
   ];
 
-  const setOpen = (open) => {
+  const setOpen = (open, returnFocus = true) => {
     toggleButton.setAttribute("aria-expanded", String(open));
     panel.hidden = !open;
     if (open) {
       const firstQuestion = questionsContainer.querySelector("button");
       if (firstQuestion) firstQuestion.focus();
-    } else {
+    } else if (returnFocus) {
       toggleButton.focus();
     }
   };
@@ -71,11 +71,12 @@ if (chatbotRoot) {
   closeButton.addEventListener("click", () => setOpen(false));
 
   cta.addEventListener("click", () => {
+    setOpen(false, false);
     const section = document.querySelector("#idopont");
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
 
-  setOpen(false);
+  setOpen(false, false);
 }
