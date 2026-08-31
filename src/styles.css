@@ -22,6 +22,13 @@ html {
   scroll-behavior: smooth;
 }
 
+#szolgaltatasok,
+#elmeny,
+#arak,
+#idopont {
+  scroll-margin-top: 104px;
+}
+
 body {
   margin: 0;
   background:
@@ -779,11 +786,6 @@ textarea {
 }
 
 @media (min-width: 720px) {
-  .desktop-nav,
-  .header-phone {
-    display: flex;
-  }
-
   .trust-strip {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -818,6 +820,13 @@ textarea {
   .site-footer {
     grid-template-columns: 1fr auto;
     align-items: end;
+  }
+}
+
+@media (min-width: 800px) {
+  .desktop-nav,
+  .header-phone {
+    display: flex;
   }
 }
 
