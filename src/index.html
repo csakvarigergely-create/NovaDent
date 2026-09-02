@@ -6,6 +6,9 @@
     <title>NovaDent Budapest | Modern fogászati rendelő</title>
     <meta name="description" content="Modern fogászati rendelő Budapesten, tapasztalt fogorvosokkal, korszerű diagnosztikával és kíméletes kezelésekkel. Kérjen időpontot egyszerűen.">
     <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Italiana&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -20,7 +23,10 @@
         <a href="#arak">Árak</a>
         <a href="#idopont">Időpont</a>
       </nav>
-      <a class="header-phone" href="tel:+3612345678">+36 1 234 5678</a>
+      <a class="header-phone" href="tel:+3612345678">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7.2 3.8 9.5 8l-2.2 1.8a14.3 14.3 0 0 0 6.9 6.9l1.8-2.2 4.2 2.3c.4.2.6.7.4 1.2l-.8 2a2 2 0 0 1-1.9 1.2C9.6 20.7 3.3 14.4 2.8 6.1A2 2 0 0 1 4 4.2l2-.8c.5-.2 1 .1 1.2.4Z"/></svg>
+        <span>+36 1 234 5678</span>
+      </a>
     </header>
 
     <main id="top">
@@ -46,14 +52,42 @@
             <p><strong>Akár aznapi sürgősségi időpont</strong><br>Fogfájás esetén gyors segítséget adunk.</p>
           </div>
         </div>
+        <aside class="hero-booking-card" aria-label="Időpontkérés">
+          <p class="eyebrow">Időpontkérés</p>
+          <h2>Kérjen időpontot egyszerűen</h2>
+          <p class="hero-booking-lead">Töltse ki az űrlapot, és kollégánk rövid időn belül felveszi Önnel a kapcsolatot az időpont egyeztetéséhez.</p>
+          <form class="appointment-form hero-booking-form" aria-label="Hero időpontkérő űrlap" novalidate>
+            <label class="sr-only" for="hero-treatment">Választott kezelés</label>
+            <select id="hero-treatment" name="treatment">
+              <option>Állapotfelmérés</option>
+              <option>Fogkő-eltávolítás</option>
+              <option>Fogfehérítés</option>
+              <option>Gyökérkezelés</option>
+              <option>Implantátum konzultáció</option>
+              <option>Sürgősségi fogászat</option>
+            </select>
+            <label class="sr-only" for="hero-name">Név</label>
+            <input id="hero-name" name="name" type="text" autocomplete="name" placeholder="Teljes név">
+            <label class="sr-only" for="hero-phone">Telefonszám</label>
+            <input id="hero-phone" name="phone" type="tel" autocomplete="tel" placeholder="+36 30 123 4567">
+            <label class="sr-only" for="hero-email">Email</label>
+            <input id="hero-email" name="email" type="email" autocomplete="email" placeholder="nev@email.hu">
+            <label class="checkbox hero-checkbox">
+              <input type="checkbox" name="privacy">
+              <span>Elfogadom az adatkezelési tájékoztatót, és hozzájárulok, hogy időpont-egyeztetés céljából felvegyék velem a kapcsolatot.</span>
+            </label>
+            <button class="btn btn-primary" type="submit">Időpontot kérek</button>
+            <p class="form-feedback" aria-live="polite"></p>
+          </form>
+        </aside>
       </section>
 
       <section class="trust-strip" aria-label="Bizalmi sáv">
-        <div>4.9 Google értékelés</div>
-        <div>500+ elégedett páciens</div>
-        <div>Sürgősségi időpont akár aznap</div>
-        <div>Kíméletes kezelések</div>
-        <div>Modern diagnosztika</div>
+        <div><span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg></span><span>4.9 Google értékelés</span></div>
+        <div><span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 20v-1.8a3.7 3.7 0 0 0-3.7-3.7H6.7A3.7 3.7 0 0 0 3 18.2V20M9.5 10.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM17 4.1a3.5 3.5 0 0 1 0 6.8M21 20v-1.8a3.7 3.7 0 0 0-2.8-3.6"/></svg></span><span>500+ elégedett páciens</span></div>
+        <div><span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1ZM12 12v4l2.5 1.5"/></svg></span><span>Sürgősségi időpont akár aznap</span></div>
+        <div><span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.8 5.7a5 5 0 0 0-7.1 0L12 7.4l-1.7-1.7a5 5 0 0 0-7.1 7.1L12 21l8.8-8.2a5 5 0 0 0 0-7.1Z"/></svg></span><span>Kíméletes kezelések</span></div>
+        <div><span class="trust-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 4H4v3M17 4h3v3M7 20H4v-3M17 20h3v-3M8 12h8M12 8v8"/></svg></span><span>Modern diagnosztika</span></div>
       </section>
 
       <section class="services section-pad" id="szolgaltatasok">
@@ -63,25 +97,59 @@
           <p>Az első vizsgálattól a teljes mosolymegújításig átlátható, emberi és precíz ellátást kap.</p>
         </div>
         <div class="card-grid services-grid">
-          <article class="service-card"><span>01</span><h3>Általános fogászat</h3><p>Állapotfelmérés, tömések és rendszeres kontrollok, hogy a kisebb problémák ne váljanak nagyobbá.</p></article>
-          <article class="service-card"><span>02</span><h3>Fogkő-eltávolítás</h3><p>Kíméletes dentálhigiéniai kezelés friss, tiszta érzetért és egészségesebb ínyért.</p></article>
-          <article class="service-card"><span>03</span><h3>Fogfehérítés</h3><p>Biztonságos, rendelői fehérítés természetes hatású, ragyogóbb mosolyért.</p></article>
-          <article class="service-card"><span>04</span><h3>Gyökérkezelés</h3><p>Modern érzéstelenítéssel és precíz műszerekkel mentjük meg a fájó, gyulladt fogakat.</p></article>
-          <article class="service-card"><span>05</span><h3>Fogpótlás</h3><p>Koronák, hidak és esztétikus pótlások, amelyek illeszkednek az arcához és harapásához.</p></article>
-          <article class="service-card"><span>06</span><h3>Implantátum</h3><p>Stabil, hosszú távú megoldás hiányzó fogak pótlására részletes tervezéssel.</p></article>
-          <article class="service-card"><span>07</span><h3>Sürgősségi fogászat</h3><p>Erős fájdalom, letört fog vagy duzzanat esetén igyekszünk gyors időpontot adni.</p></article>
-          <article class="service-card"><span>08</span><h3>Esztétikai fogászat</h3><p>Finom, természetes mosolytervezés héjakkal, bondinggal és esztétikus restaurációkkal.</p></article>
+          <article class="service-card">
+            <span class="service-index">01</span>
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 11c-4-5-13-5-16 1-4 8 2 12 3 21 .5 5 2 8 5 8 4 0 4-10 8-10s4 10 8 10c3 0 4.5-3 5-8 1-9 7-13 3-21-3-6-12-6-16-1Z"/><path d="M17 13c2 2 4 3 7 3s5-1 7-3"/></svg></span>
+            <h3>Általános fogászat</h3><p>Állapotfelmérés, tömések és rendszeres kontrollok, hogy a kisebb problémák ne váljanak nagyobbá.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">02</span>
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 11c-4-5-13-5-16 1-4 8 2 12 3 21 .5 5 2 8 5 8 4 0 4-10 8-10s4 10 8 10c3 0 4.5-3 5-8 1-9 7-13 3-21-3-6-12-6-16-1Z"/><path d="M16 20h16M14 25h20M15 30h18"/></svg></span>
+            <h3>Fogkő-eltávolítás</h3><p>Kíméletes dentálhigiéniai kezelés friss, tiszta érzetért és egészségesebb ínyért.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">03</span>
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M21 14c-4-4-11-3-13 3-2 6 3 10 4 17 .5 4 1.8 7 4 7 3 0 3-8 6-8s3 8 6 8c2.2 0 3.5-3 4-7 .4-3 1.5-5.5 2.5-8"/><path d="m36 7 1.8 4.2L42 13l-4.2 1.8L36 19l-1.8-4.2L30 13l4.2-1.8L36 7Zm5 13 .9 2.1 2.1.9-2.1.9L41 26l-.9-2.1L38 23l2.1-.9L41 20Z"/></svg></span>
+            <h3>Fogfehérítés</h3><p>Biztonságos, rendelői fehérítés természetes hatású, ragyogóbb mosolyért.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">04</span>
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 9c-5-4-13-2-15 5-2 7 3 11 4 19 .5 5 1.8 8 4 8 3.5 0 3.5-10 7-10s3.5 10 7 10c2.2 0 3.5-3 4-8 1-8 6-12 4-19-2-7-10-9-15-5Z"/><path d="M24 15v16m-4-10 4 4 4-4"/></svg></span>
+            <h3>Gyökérkezelés</h3><p>Modern érzéstelenítéssel és precíz műszerekkel mentjük meg a fájó, gyulladt fogakat.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">05</span>
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m9 16 5 6 10-11 10 11 5-6-3 17H12L9 16Z"/><path d="M12 33h24v6H12zM16 27h16"/></svg></span>
+            <h3>Fogpótlás</h3><p>Koronák, hidak és esztétikus pótlások, amelyek illeszkednek az arcához és harapásához.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">06</span>
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M16 9h16l3 6-3 6H16l-3-6 3-6Z"/><path d="M19 21v7h10v-7M21 28v11m6-11v11m-9-7h12m-11 4h10m-7 3 2 4 2-4"/></svg></span>
+            <h3>Implantátum</h3><p>Stabil, hosszú távú megoldás hiányzó fogak pótlására részletes tervezéssel.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">07</span>
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M21 13c-4-4-11-2-13 4-2 7 3 10 4 17 .5 4 2 7 4 7 3 0 3-8 6-8s3 8 6 8c2 0 3.5-3 4-7 .4-3 1-5 2-7"/><path d="M38 8v12M32 14h12"/></svg></span>
+            <h3>Sürgősségi fogászat</h3><p>Erős fájdalom, letört fog vagy duzzanat esetén igyekszünk gyors időpontot adni.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-index">08</span>
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 26c5 8 11 12 18 12 6 0 11-3 15-9M12 26c4 4 9 6 14 6 4 0 8-1 11-4"/><path d="m35 6 1.8 4.2L41 12l-4.2 1.8L35 18l-1.8-4.2L29 12l4.2-1.8L35 6ZM17 10l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1 1-2.5Z"/></svg></span>
+            <h3>Esztétikai fogászat</h3><p>Finom, természetes mosolytervezés héjakkal, bondinggal és esztétikus restaurációkkal.</p>
+          </article>
         </div>
       </section>
 
       <section class="comfort section-pad" id="elmeny">
         <div class="split-image">
-          <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85" alt="Mosolygó páciens fogászati konzultáción">
+          <img src="https://images.unsplash.com/photo-1783075676691-613367095b96?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" alt="Meleg hangulatú várótér zöld fotelekkel és növényekkel">
         </div>
         <div class="split-copy">
           <p class="eyebrow">Kíméletes ellátás</p>
           <h2>Kíméletes kezelés, nyugodt környezetben</h2>
           <p>A korszerű eszközök mellett arra is figyelünk, hogyan érzi magát a kezelés közben. Nem kapkodunk, és igyekszünk úgy dolgozni, hogy a kezelés a lehető legkevesebb kellemetlenséggel járjon.</p>
+        </div>
+        <div class="comfort-benefits">
           <ul class="check-list">
             <li>Korszerű eszközök és kezelési módszerek</li>
             <li>Kíméletes érzéstelenítés</li>
@@ -98,22 +166,26 @@
           <h2>Tudja előre, mire számíthat.</h2>
         </div>
         <div class="card-grid why-grid">
-          <article><h3>Árak előre tisztázva</h3><p>A kezelés előtt átbeszéljük a várható költségeket, hogy ne érje meglepetés.</p></article>
-          <article><h3>Korszerű háttér</h3><p>Digitális diagnosztikával és modern eszközökkel dolgozunk, hogy pontosabb képet kapjunk az állapotáról.</p></article>
-          <article><h3>Tapasztalt fogorvosok</h3><p>Rutinos szakemberekkel találkozik, akik érthetően elmondják, mit és miért javasolnak.</p></article>
-          <article><h3>Gyors segítség, ha sürgős</h3><p>Erős fájdalom vagy sürgős panasz esetén igyekszünk minél hamarabb időpontot adni.</p></article>
-          <article><h3>Önre szabott kezelési terv</h3><p>A javaslatot az Ön fogainak állapotához és lehetőségeihez igazítjuk.</p></article>
-          <article><h3>Garancia bizonyos kezelésekre</h3><p>Ahol garanciát vállalunk, annak feltételeit előre egyértelműen elmondjuk.</p></article>
+          <article><span class="step-number">01</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="14" cy="14" r="7"/><path d="m19 19 6 6M11 14h6m-3-3v6"/></svg></span><h3>Árak előre tisztázva</h3><p>A kezelés előtt átbeszéljük a várható költségeket, hogy ne érje meglepetés.</p></article>
+          <article><span class="step-number">02</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 16s4-7 11-7 11 7 11 7-4 7-11 7S5 16 5 16Z"/><circle cx="16" cy="16" r="3"/></svg></span><h3>Korszerű háttér</h3><p>Digitális diagnosztikával és modern eszközökkel dolgozunk, hogy pontosabb képet kapjunk az állapotáról.</p></article>
+          <article><span class="step-number">03</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="10" r="4"/><path d="M8 27c0-6 3-10 8-10s8 4 8 10M24 8l2 2 4-4"/></svg></span><h3>Tapasztalt fogorvosok</h3><p>Rutinos szakemberekkel találkozik, akik érthetően elmondják, mit és miért javasolnak.</p></article>
+          <article><span class="step-number">04</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 6v4m18-4v4M5 12h22v15H5z"/><path d="M16 16v7m-3.5-3.5h7"/></svg></span><h3>Gyors segítség, ha sürgős</h3><p>Erős fájdalom vagy sürgős panasz esetén igyekszünk minél hamarabb időpontot adni.</p></article>
+          <article><span class="step-number">05</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 5h14v22H9zM13 9h6M13 14h6"/><path d="m14 22 7-7 3 3-7 7-4 1 1-4Z"/></svg></span><h3>Önre szabott kezelési terv</h3><p>A javaslatot az Ön fogainak állapotához és lehetőségeihez igazítjuk.</p></article>
+          <article><span class="step-number">06</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m16 4 3 3 4-.5.5 4 3 3-2 3.5 2 3.5-3 3-.5 4-4-.5-3 3-3-3-4 .5-.5-4-3-3 2-3.5-2-3.5 3-3 .5-4 4 .5 3-3Z"/><path d="m12 16 3 3 6-7"/></svg></span><h3>Garancia bizonyos kezelésekre</h3><p>Ahol garanciát vállalunk, annak feltételeit előre egyértelműen elmondjuk.</p></article>
         </div>
       </section>
 
       <section class="office section-pad">
         <div class="office-card">
-          <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1500&q=85" alt="Prémium, világos fogászati kezelő">
-          <div>
+          <div class="office-copy">
             <p class="eyebrow">A rendelő</p>
             <h2>Letisztult rendelő, nyugodt környezet</h2>
             <p>Világos, modern rendelőben várjuk, korszerű kezelőkkel és rendezett környezettel. Arra törekszünk, hogy a rendelő nyugodt legyen, miközben minden adott a pontos és biztonságos kezeléshez.</p>
+          </div>
+          <div class="office-gallery" aria-label="A NovaDent rendelő terei">
+            <img class="office-gallery-main" src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&amp;fit=crop&amp;w=1500&amp;q=85" alt="Prémium, világos fogászati kezelő">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Világos, modern kezelőhelyiség">
+            <img src="https://images.unsplash.com/photo-1783075676691-613367095b96?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Nyugodt várótér természetes részletekkel">
           </div>
         </div>
       </section>
@@ -131,8 +203,8 @@
 
       <section class="pricing section-pad" id="arak">
         <div class="section-heading">
-          <p class="eyebrow">Első lépés</p>
-          <h2>Belépő ajánlatok első látogatáshoz</h2>
+          <p class="eyebrow">Árak</p>
+          <h2>Néhány gyakori kezelés ára</h2>
           <p>Pontos árat minden esetben személyes állapotfelmérés után adunk.</p>
         </div>
         <div class="price-list">
@@ -149,9 +221,9 @@
           <h2>Kérjen időpontot egyszerűen</h2>
           <p>Töltse ki az űrlapot, és kollégánk rövid időn belül felveszi Önnel a kapcsolatot az időpont egyeztetéséhez.</p>
           <ul class="appointment-trust">
-            <li>Rövid időn belül visszajelzünk</li>
-            <li>Az időpont egyeztetése kötelezettségmentes</li>
-            <li>Ha nem tudja, melyik kezelésre van szüksége, segítünk eligazodni</li>
+            <li><span class="appointment-trust-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="M16 10v6l4 2"/></svg></span><span>Rövid időn belül visszajelzünk</span></li>
+            <li><span class="appointment-trust-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 16s4-7 11-7 11 7 11 7-4 7-11 7S5 16 5 16Z"/><circle cx="16" cy="16" r="3"/></svg></span><span>Az időpont egyeztetése kötelezettségmentes</span></li>
+            <li><span class="appointment-trust-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="M12.5 13a3.7 3.7 0 0 1 7 1.7c0 2.7-3.5 3.1-3.5 5.3M16 24h.01"/></svg></span><span>Ha nem tudja, melyik kezelésre van szüksége, segítünk eligazodni</span></li>
           </ul>
         </div>
         <form class="appointment-form" aria-label="Időpontkérő űrlap" novalidate>
@@ -182,7 +254,10 @@
       </section>
 
       <section class="final-cta section-pad">
-        <div>
+        <div class="final-cta-art" aria-hidden="true">
+          <img src="assets/eucalyptus-cta.webp" alt="">
+        </div>
+        <div class="final-cta-copy">
           <p class="eyebrow">Ne várja meg, amíg rosszabb lesz</p>
           <h2>Ne halogassa a fogászati problémát</h2>
           <p>Egy rövid konzultáció sok bizonytalanságot levesz a válláról. Kérjen időpontot, és átbeszéljük, milyen további vizsgálatra vagy kezelésre lehet szükség.</p>
@@ -196,11 +271,15 @@
 
     <footer class="site-footer">
       <div class="footer-main">
-        <p><strong>NovaDent Budapest</strong></p>
+        <p class="footer-brand"><span class="brand-mark" aria-hidden="true">N</span><strong>NovaDent Budapest</strong></p>
         <p>Modern fogászati rendelő</p>
+      </div>
+      <div class="footer-contact">
         <p>1052 Budapest, Minta utca 12.</p>
         <p><a href="tel:+3612345678">+36 1 234 5678</a></p>
         <p><a href="mailto:info@novadent.hu">info@novadent.hu</a></p>
+      </div>
+      <div class="footer-hours">
         <p>Hétfő-Péntek: 8:00-18:00</p>
       </div>
       <div class="footer-links">

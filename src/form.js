@@ -1,11 +1,11 @@
-const form = document.querySelector(".appointment-form");
+const forms = document.querySelectorAll(".appointment-form");
 
-if (form) {
-  const nameInput = form.querySelector("#name");
-  const phoneInput = form.querySelector("#phone");
-  const emailInput = form.querySelector("#email");
-  const treatmentInput = form.querySelector("#treatment");
-  const messageInput = form.querySelector("#message");
+forms.forEach((form) => {
+  const nameInput = form.querySelector("[name='name']");
+  const phoneInput = form.querySelector("[name='phone']");
+  const emailInput = form.querySelector("[name='email']");
+  const treatmentInput = form.querySelector("[name='treatment']");
+  const messageInput = form.querySelector("[name='message']");
   const privacyInput = form.querySelector("input[name='privacy']");
   const submitButton = form.querySelector("button[type='submit']");
   const feedback = form.querySelector(".form-feedback");
@@ -79,7 +79,7 @@ if (form) {
     state.phone = phoneInput.value.trim();
     state.email = emailInput.value.trim();
     state.treatment = treatmentInput.value.trim();
-    state.message = messageInput.value.trim();
+    state.message = messageInput ? messageInput.value.trim() : "";
     state.acceptedPrivacy = Boolean(privacyInput.checked);
   };
 
@@ -160,4 +160,4 @@ if (form) {
       setLoading(false);
     }
   });
-}
+});
